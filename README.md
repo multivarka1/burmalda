@@ -46,29 +46,3 @@ with burmalda.burmalda():
     raise RuntimeError("Something broke")
 ```
 
-## Publishing to PyPI
-
-Build the package:
-
-```bash
-python -m pip install --upgrade build twine
-python -m build
-```
-
-Check the package:
-
-```bash
-python -m twine check dist/*
-```
-
-Upload to TestPyPI first:
-
-```bash
-python -m twine upload --repository testpypi dist/*
-```
-
-Then upload to PyPI:
-
-```bash
-python -m twine upload dist/*
-```
